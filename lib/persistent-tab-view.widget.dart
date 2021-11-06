@@ -152,6 +152,7 @@ class PersistentTabView extends PersistentTabViewBase {
     this.handleAndroidBackButtonPress = true,
     this.hideNavigationBar,
     this.screenTransitionAnimation = const ScreenTransitionAnimation(),
+    NavBarDecoration decoration = const NavBarDecoration(),
   }) : super(
           key: key,
           context: context,
@@ -172,7 +173,7 @@ class PersistentTabView extends PersistentTabViewBase {
           hideNavigationBar: hideNavigationBar,
           screenTransitionAnimation: screenTransitionAnimation,
           isCustomWidget: true,
-          decoration: NavBarDecoration(),
+          decoration: decoration,
         ) {
     assert(itemCount == screens.length,
         "screens and items length should be same. If you are using the onPressed callback function of 'PersistentBottomNavBarItem', enter a dummy screen like Container() in its place in the screens");
