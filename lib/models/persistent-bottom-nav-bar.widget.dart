@@ -37,35 +37,19 @@ class PersistentBottomNavBar extends StatelessWidget {
                         ? false
                         : confineToSafeArea ?? true,
                     child: Container(
-                      color: this.navBarEssentials!.backgroundColor,
-                       decoration: BoxDecoration(
-                       boxShadow: [
-                          BoxShadow(
-                             color: Color.fromARGB(41, 0, 0, 0),
-                             spreadRadius: 0,
-                             blurRadius: 25,
-                             offset: Offset(0, -3), // changes position of shadow
-                          ),
-                       ],
-                    ),
-                    //color: this.navBarEssentials!.backgroundColor,
+                      decoration: getNavBarDecoration(
+                        decoration: this.navBarDecoration,
+                        color: this.navBarEssentials!.backgroundColor,
+                      ),
                       height: this.navBarEssentials!.navBarHeight,
                       child: this.customNavBarWidget,
                     ),
                   )
                 : Container(
-                  decoration: BoxDecoration(
-                    color: this.navBarEssentials!.backgroundColor,
-                       boxShadow: [
-                          BoxShadow(
-                             color: Color.fromARGB(41, 0, 0, 0),
-                             spreadRadius: 0,
-                             blurRadius: 25,
-                             offset: Offset(0, -3), // changes position of shadow
-                          ),
-                       ],
+                    decoration: getNavBarDecoration(
+                      decoration: this.navBarDecoration,
+                      color: this.navBarEssentials!.backgroundColor,
                     ),
-                    //color: this.navBarEssentials!.backgroundColor,
                     child: SafeArea(
                         top: false,
                         bottom: this.navBarEssentials!.navBarHeight == 0.0 ||
