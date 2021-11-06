@@ -40,6 +40,10 @@ class PersistentBottomNavBar extends StatelessWidget {
                       decoration: getNavBarDecoration(
                         decoration: this.navBarDecoration,
                         color: this.navBarEssentials!.backgroundColor,
+                        opacity: this
+                            .navBarEssentials!
+                            .items![this.navBarEssentials!.selectedIndex!]
+                            .opacity,
                       ),
                       height: this.navBarEssentials!.navBarHeight,
                       child: this.customNavBarWidget,
@@ -49,6 +53,10 @@ class PersistentBottomNavBar extends StatelessWidget {
                     decoration: getNavBarDecoration(
                       decoration: this.navBarDecoration,
                       color: this.navBarEssentials!.backgroundColor,
+                      opacity: this
+                          .navBarEssentials!
+                          .items![this.navBarEssentials!.selectedIndex!]
+                          .opacity,
                     ),
                     child: SafeArea(
                         top: false,
