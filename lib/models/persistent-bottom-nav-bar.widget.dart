@@ -37,9 +37,9 @@ class PersistentBottomNavBar extends StatelessWidget {
                         ? false
                         : confineToSafeArea ?? true,
                     child: Container(
+                      color: this.navBarEssentials!.backgroundColor,
                        decoration: BoxDecoration(
                        boxShadow: [
-                          color: this.navBarEssentials!.backgroundColor,
                           BoxShadow(
                              color: Color.fromARGB(41, 0, 0, 0),
                              spreadRadius: 0,
@@ -55,8 +55,8 @@ class PersistentBottomNavBar extends StatelessWidget {
                   )
                 : Container(
                   decoration: BoxDecoration(
+                    color: this.navBarEssentials!.backgroundColor,
                        boxShadow: [
-                          color: this.navBarEssentials!.backgroundColor,
                           BoxShadow(
                              color: Color.fromARGB(41, 0, 0, 0),
                              spreadRadius: 0,
